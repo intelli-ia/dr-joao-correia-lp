@@ -61,12 +61,20 @@ export default function AboutSection() {
                 boxShadow: "0 32px 80px rgba(21,41,66,0.14)",
               }}
             >
+              {/* Desktop */}
               <Image
                 src="/dr-joao-correia.webp"
                 alt="Dr. João Correia"
                 fill
-                className="object-cover"
+                className="object-cover hidden lg:block"
                 style={{ transform: "scale(1.12) translateX(-5%) translateY(4%)" }}
+              />
+              {/* Mobile */}
+              <Image
+                src="/dr-joao-about-mobile.webp"
+                alt="Dr. João Correia"
+                fill
+                className="object-cover lg:hidden"
               />
               {/* Bottom gradient for depth */}
               <div
