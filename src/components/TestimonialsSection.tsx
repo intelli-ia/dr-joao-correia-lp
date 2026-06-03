@@ -35,6 +35,41 @@ function getInitial(name: string) {
   return name.trim()[0].toUpperCase();
 }
 
+function TestimonialCard({ t }: { t: { name: string; text: string } }) {
+  return (
+    <div
+      className="flex-none rounded-2xl p-6 flex flex-col justify-between"
+      style={{
+        width: "320px",
+        minHeight: "190px",
+        background: "rgba(255,255,242,0.04)",
+        border: "1px solid rgba(255,255,242,0.08)",
+      }}
+    >
+      <p
+        className="text-base leading-relaxed"
+        style={{ color: "rgba(255,255,242,0.78)", fontFamily: "Cairo, sans-serif" }}
+      >
+        "{t.text}"
+      </p>
+      <div className="flex items-center gap-3 mt-5">
+        <div
+          className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold"
+          style={{ backgroundColor: "rgba(228,152,4,0.18)", color: "#E49804", fontFamily: "Cairo, sans-serif" }}
+        >
+          {getInitial(t.name)}
+        </div>
+        <p
+          className="text-sm font-semibold"
+          style={{ color: "#FFFFF2", fontFamily: "Cairo, sans-serif" }}
+        >
+          {t.name}
+        </p>
+      </div>
+    </div>
+  );
+}
+
 // Duplicar para loop perfeito
 const looped = [...testimonials, ...testimonials];
 
@@ -48,8 +83,16 @@ export default function TestimonialsSection() {
           0%   { transform: translateX(0); }
           100% { transform: translateX(-50%); }
         }
+        @keyframes marquee-reverse {
+          0%   { transform: translateX(-50%); }
+          100% { transform: translateX(0); }
+        }
         .marquee-track {
           animation: marquee 32s linear infinite;
+          will-change: transform;
+        }
+        .marquee-track-reverse {
+          animation: marquee-reverse 32s linear infinite;
           will-change: transform;
         }
       `}</style>
@@ -86,42 +129,20 @@ export default function TestimonialsSection() {
           </h2>
         </div>
 
-        {/* Marquee */}
+        {/* Marquee → esquerda */}
         <div className="overflow-hidden">
           <div className="marquee-track flex" style={{ gap: "1.25rem", width: "max-content" }}>
             {looped.map((t, i) => (
-              <div
-                key={i}
-                className="flex-none rounded-2xl p-6 flex flex-col justify-between"
-                style={{
-                  width: "320px",
-                  minHeight: "190px",
-                  background: "rgba(255,255,242,0.04)",
-                  border: "1px solid rgba(255,255,242,0.08)",
-                }}
-              >
-                <p
-                  className="text-base leading-relaxed"
-                  style={{ color: "rgba(255,255,242,0.78)", fontFamily: "Cairo, sans-serif" }}
-                >
-                  "{t.text}"
-                </p>
+              <TestimonialCard key={i} t={t} />
+            ))}
+          </div>
+        </div>
 
-                <div className="flex items-center gap-3 mt-5">
-                  <div
-                    className="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 text-sm font-bold"
-                    style={{ backgroundColor: "rgba(228,152,4,0.18)", color: "#E49804", fontFamily: "Cairo, sans-serif" }}
-                  >
-                    {getInitial(t.name)}
-                  </div>
-                  <p
-                    className="text-sm font-semibold"
-                    style={{ color: "#FFFFF2", fontFamily: "Cairo, sans-serif" }}
-                  >
-                    {t.name}
-                  </p>
-                </div>
-              </div>
+        {/* Marquee → direita */}
+        <div className="overflow-hidden mt-5">
+          <div className="marquee-track-reverse flex" style={{ gap: "1.25rem", width: "max-content" }}>
+            {looped.map((t, i) => (
+              <TestimonialCard key={i} t={t} />
             ))}
           </div>
         </div>
