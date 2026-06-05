@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import { trackGenerateLead, trackContactWhatsapp } from "@/lib/gtag";
+import { trackGenerateLead, trackContactWhatsapp, trackGoogleAdsConversion } from "@/lib/gtag";
 
 const floatingCards = [
   {
@@ -164,7 +164,7 @@ export default function HeroSection() {
                 href="https://wa.me/5573988146281?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta."
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={trackGenerateLead}
+                onClick={() => { trackGenerateLead(); trackGoogleAdsConversion(); }}
                 className="inline-flex items-center justify-center gap-2 px-5 py-2.5 lg:px-6 lg:py-3 rounded-md text-sm font-bold transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110"
                 style={{
                   backgroundColor: "#E49804",

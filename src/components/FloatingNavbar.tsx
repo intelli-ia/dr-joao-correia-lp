@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { trackGenerateLead } from "@/lib/gtag";
+import { trackGenerateLead, trackGoogleAdsConversion } from "@/lib/gtag";
 
 export default function FloatingNavbar() {
   const [visible, setVisible] = useState(false);
@@ -59,7 +59,7 @@ export default function FloatingNavbar() {
           href="https://wa.me/5573988146281?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta."
           target="_blank"
           rel="noopener noreferrer"
-          onClick={trackGenerateLead}
+          onClick={() => { trackGenerateLead(); trackGoogleAdsConversion(); }}
           className="inline-flex items-center px-5 py-2 rounded-md text-sm font-bold transition-all duration-200 hover:-translate-y-0.5"
           style={{
             backgroundColor: "#E49804",

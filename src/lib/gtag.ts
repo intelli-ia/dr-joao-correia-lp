@@ -9,6 +9,16 @@ export function trackGenerateLead() {
   }
 }
 
+export function trackGoogleAdsConversion() {
+  if (typeof gtag !== "undefined") {
+    gtag("event", "conversion", {
+      send_to: "AW-17439844928/vgGFCKLNyLkcEMDU-_tA",
+      value: 1.0,
+      currency: "BRL",
+    });
+  }
+}
+
 export function trackContactWhatsapp() {
   if (typeof gtag !== "undefined") {
     gtag("event", "contact_whatsapp", {
