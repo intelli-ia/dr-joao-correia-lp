@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useEffect } from "react";
+import { trackGenerateLead, trackContactWhatsapp } from "@/lib/gtag";
 
 export default function CtaSection() {
   const ref = useRef<HTMLDivElement>(null);
@@ -68,6 +69,7 @@ export default function CtaSection() {
             href="https://wa.me/5573988146281?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta."
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackGenerateLead}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-5 py-2.5 sm:px-8 sm:py-4 rounded-md text-sm sm:text-base font-bold transition-all duration-300 hover:-translate-y-0.5 hover:brightness-105"
             style={{
               backgroundColor: "#E49804",
@@ -84,6 +86,7 @@ export default function CtaSection() {
             href="https://wa.me/5573988146281?text=Olá%2C%20gostaria%20de%20tirar%20algumas%20dúvidas."
             target="_blank"
             rel="noopener noreferrer"
+            onClick={trackContactWhatsapp}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-2.5 sm:px-8 sm:py-4 rounded-md text-sm sm:text-base font-semibold border-2 transition-all duration-300 hover:-translate-y-0.5"
             style={{
               borderColor: "rgba(21,41,66,0.2)",
