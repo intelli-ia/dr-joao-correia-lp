@@ -63,7 +63,7 @@ export default function AboutSection() {
             >
               {/* Desktop */}
               <Image
-                src="/dr-joao-correia.webp"
+                src="/dr-joao-nova.jpg"
                 alt="Dr. João Correia"
                 fill
                 className="object-cover hidden lg:block"
@@ -71,7 +71,7 @@ export default function AboutSection() {
               />
               {/* Mobile */}
               <Image
-                src="/dr-joao-about-mobile.webp"
+                src="/dr-joao-nova.jpg"
                 alt="Dr. João Correia"
                 fill
                 className="object-cover lg:hidden"

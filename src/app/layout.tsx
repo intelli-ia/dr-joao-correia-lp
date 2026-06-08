@@ -11,7 +11,7 @@ const cairo = Cairo({
 });
 
 export const metadata: Metadata = {
-  title: "Dr. João Correia – Cirurgião Coloproctologista em Ilhéus e Itabuna",
+  title: "Dr. João Correia – Cirurgião Geral e Coloproctologista em Ilhéus e Itabuna",
   description:
     "Tratamento especializado em coloproctologia com procedimentos minimamente invasivos. Atendimento em Ilhéus e Itabuna.",
 };

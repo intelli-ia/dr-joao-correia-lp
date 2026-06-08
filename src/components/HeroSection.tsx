@@ -140,7 +140,7 @@ export default function HeroSection() {
               className="text-base sm:text-xl font-medium leading-relaxed max-w-xl"
               style={{ color: "#152942", opacity: 0.75, fontFamily: "Cairo, sans-serif" }}
             >
-              Cirurgião coloproctologista em Ilhéus e Itabuna. Procedimentos
+              Cirurgião geral e coloproctologista em Ilhéus e Itabuna. Procedimentos
               minimamente invasivos para quem quer{" "}
               <span className="font-semibold" style={{ color: "#152942", opacity: 1 }}>
                 resolver, não adiar.
@@ -232,11 +232,11 @@ export default function HeroSection() {
                 style={{ aspectRatio: "3/4", boxShadow: "0 24px 64px rgba(21,41,66,0.22)" }}
               >
                 <Image
-                  src="/dr-joao-hero.webp"
-                  alt="Dr. João Correia – Cirurgião Coloproctologista"
+                  src="/dr-joao-nova.jpg"
+                  alt="Dr. João Correia – Cirurgião Geral e Coloproctologista"
                   fill priority
                   className="object-cover"
-                  style={{ transform: "scale(1.12) translateX(0%) translateY(4%)" }}
+                  style={{ transform: "scale(1.22) translateX(-8%) translateY(8%)" }}
                 />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(10,20,35,0.75) 0%, rgba(10,20,35,0.1) 45%, transparent 100%)" }} />
                 <div
@@ -244,7 +244,7 @@ export default function HeroSection() {
                   style={{ background: "rgba(10,20,35,0.45)", backdropFilter: "blur(12px)", border: "1px solid rgba(255,255,255,0.07)" }}
                 >
                   <p className="text-sm font-bold" style={{ color: "#FFFFF2", fontFamily: "Cairo, sans-serif" }}>Dr. João Correia</p>
-                  <p className="text-xs mt-0.5" style={{ color: "rgba(228,152,4,0.85)", fontFamily: "Cairo, sans-serif" }}>CRM · Cirurgião Coloproctologista</p>
+                  <p className="text-xs mt-0.5" style={{ color: "rgba(228,152,4,0.85)", fontFamily: "Cairo, sans-serif" }}>CRM · Cirurgião Geral e Coloproctologista</p>
                 </div>
               </div>
               {floatingCards.map((card, i) => (
@@ -266,11 +266,11 @@ export default function HeroSection() {
                 style={{ aspectRatio: "3/4", maxHeight: "360px", boxShadow: "0 16px 48px rgba(21,41,66,0.2)" }}
               >
                 <Image
-                  src="/dr-joao-hero.webp"
-                  alt="Dr. João Correia – Cirurgião Coloproctologista"
+                  src="/dr-joao-nova.jpg"
+                  alt="Dr. João Correia – Cirurgião Geral e Coloproctologista"
                   fill
                   className="object-cover"
-                  style={{ transform: "scale(1.12) translateX(0%) translateY(4%)" }}
+                  style={{ transform: "scale(1.12) translateX(-4%) translateY(4%)" }}
                 />
                 <div className="absolute inset-0" style={{ background: "linear-gradient(to top, rgba(10,20,35,0.75) 0%, rgba(10,20,35,0.1) 45%, transparent 100%)" }} />
                 <div
@@ -278,7 +278,7 @@ export default function HeroSection() {
                   style={{ background: "rgba(10,20,35,0.45)", backdropFilter: "blur(12px)", border: "1px solid rgba(255,255,255,0.07)" }}
                 >
                   <p className="text-sm font-bold" style={{ color: "#FFFFF2", fontFamily: "Cairo, sans-serif" }}>Dr. João Correia</p>
-                  <p className="text-xs" style={{ color: "rgba(228,152,4,0.85)", fontFamily: "Cairo, sans-serif" }}>CRM · Cirurgião Coloproctologista</p>
+                  <p className="text-xs" style={{ color: "rgba(228,152,4,0.85)", fontFamily: "Cairo, sans-serif" }}>CRM · Cirurgião Geral e Coloproctologista</p>
                 </div>
               </div>
 
