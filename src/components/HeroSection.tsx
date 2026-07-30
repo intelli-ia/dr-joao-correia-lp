@@ -2,7 +2,6 @@
 
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-import { trackGenerateLead, trackContactWhatsapp, trackGoogleAdsConversion, trackGoogleAdsContactConversion } from "@/lib/gtag";
 
 const floatingCards = [
   {
@@ -164,8 +163,7 @@ export default function HeroSection() {
                 href="https://wa.me/5573988146281?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta."
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => { trackGenerateLead(); trackGoogleAdsConversion(); }}
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 lg:px-6 lg:py-3 rounded-md text-sm font-bold transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110"
+className="inline-flex items-center justify-center gap-2 px-5 py-2.5 lg:px-6 lg:py-3 rounded-md text-sm font-bold transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110"
                 style={{
                   backgroundColor: "#E49804",
                   color: "#FFFFF2",
@@ -180,8 +178,7 @@ export default function HeroSection() {
                 href="https://wa.me/5573988146281?text=Olá%2C%20gostaria%20de%20tirar%20algumas%20dúvidas."
                 target="_blank"
                 rel="noopener noreferrer"
-                onClick={() => { trackContactWhatsapp(); trackGoogleAdsContactConversion(); }}
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 lg:px-6 lg:py-3 rounded-md text-sm font-semibold border-2 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#152942] hover:text-[#FFFFF2]"
+className="inline-flex items-center justify-center gap-2 px-5 py-2.5 lg:px-6 lg:py-3 rounded-md text-sm font-semibold border-2 transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#152942] hover:text-[#FFFFF2]"
                 style={{
                   borderColor: "#152942",
                   color: "#152942",
